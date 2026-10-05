@@ -1,7 +1,11 @@
 import './App.css';
 import Navbar from './components/Navbar';
 import Hero from './components/Hero';
-
+import Problem from './components/Problem';
+import Services from './components/Services';
+import Clients from './components/Clients';
+import About from './components/About';
+import Contact from './components/Contact/Contact';
 function App() {
   return (
     <>
@@ -9,6 +13,11 @@ function App() {
 
       <main>
         <Hero />
+        <Problem />
+        <Services />
+        <Clients />
+        <About />
+        <Contact />
 
         <section
           id="services"

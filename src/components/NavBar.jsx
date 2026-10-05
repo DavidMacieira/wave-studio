@@ -2,6 +2,7 @@ import { useEffect, useState } from 'react';
 import { ArrowUpRight, Menu, X } from 'lucide-react';
 import './Navbar.css';
 
+
 function WhatsAppIcon({ size = 17 }) {
   return (
     <svg

@@ -1,0 +1,362 @@
+.contact {
+  position: relative;
+  min-height: 100vh;
+  overflow: hidden;
+  background: #0d2634;
+  color: #f7fafc;
+}
+
+.contact__background {
+  position: absolute;
+  inset: 0;
+  overflow: hidden;
+  pointer-events: none;
+}
+
+.contact__grid {
+  position: absolute;
+  inset: 0;
+  opacity: 0.08;
+  background-image:
+    linear-gradient(
+      rgba(132, 179, 206, 0.5) 1px,
+      transparent 1px
+    ),
+    linear-gradient(
+      90deg,
+      rgba(132, 179, 206, 0.5) 1px,
+      transparent 1px
+    );
+  background-size: 80px 80px;
+  mask-image: linear-gradient(
+    to bottom,
+    black,
+    transparent 80%
+  );
+}
+
+.contact__orb {
+  position: absolute;
+  border-radius: 50%;
+  filter: blur(100px);
+  opacity: 0.2;
+}
+
+.contact__orb--one {
+  width: 500px;
+  height: 500px;
+  top: -180px;
+  right: -120px;
+  background: #16587b;
+}
+
+.contact__orb--two {
+  width: 420px;
+  height: 420px;
+  bottom: 10%;
+  left: -180px;
+  background: #84b3ce;
+  opacity: 0.08;
+}
+
+.contact__wave {
+  position: absolute;
+  left: -5%;
+  width: 110%;
+  height: 55%;
+  bottom: -15%;
+  opacity: 0.15;
+}
+
+.contact__wave svg {
+  width: 100%;
+  height: 100%;
+}
+
+.contact__wave path {
+  fill: #16587b;
+}
+
+.contact__wave--two {
+  bottom: -22%;
+  opacity: 0.1;
+}
+
+.contact__container {
+  position: relative;
+  z-index: 2;
+  width: min(1400px, calc(100% - 80px));
+  margin: 0 auto;
+  padding: 40px 0 28px;
+}
+
+.contact__top {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 100px;
+}
+
+.contact__eyebrow,
+.contact__section-number {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  font-size: 11px;
+  font-weight: 600;
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+}
+
+.contact__eyebrow-line {
+  width: 34px;
+  height: 1px;
+  background: #84b3ce;
+}
+
+.contact__section-number {
+  gap: 24px;
+  color: rgba(247, 250, 252, 0.45);
+}
+
+.contact__section-number span:first-child {
+  color: #f7fafc;
+}
+
+.contact__hero {
+  display: grid;
+  grid-template-columns: minmax(0, 1.5fr) minmax(280px, 0.5fr);
+  gap: 80px;
+  align-items: end;
+  min-height: 530px;
+  margin-bottom: 100px;
+}
+
+.contact__mini-label {
+  margin-bottom: 25px;
+  color: #84b3ce;
+  font-size: 11px;
+  font-weight: 600;
+  letter-spacing: 0.2em;
+}
+
+.contact__hero h2,
+.contact__hero h3 {
+  font-family: var(--font-display);
+  font-weight: 400;
+  line-height: 0.82;
+  letter-spacing: -0.025em;
+}
+
+.contact__hero h2 {
+  display: flex;
+  flex-direction: column;
+  font-size: clamp(90px, 12vw, 190px);
+}
+
+.contact__hero h2 span {
+  color: transparent;
+  -webkit-text-stroke: 1px rgba(247, 250, 252, 0.7);
+}
+
+.contact__hero h3 {
+  margin-top: 20px;
+  color: #84b3ce;
+  font-size: clamp(70px, 9vw, 145px);
+}
+
+.contact__hero-side {
+  padding-bottom: 12px;
+}
+
+.contact__hero-side p {
+  max-width: 340px;
+  margin-bottom: 35px;
+  color: rgba(247, 250, 252, 0.62);
+  font-size: 15px;
+  line-height: 1.7;
+}
+
+.contact__start {
+  display: inline-flex;
+  align-items: center;
+  gap: 20px;
+  padding: 0;
+  border: 0;
+  background: transparent;
+  color: #f7fafc;
+  font-size: 12px;
+  font-weight: 700;
+  letter-spacing: 0.13em;
+}
+
+.contact__start-icon {
+  display: grid;
+  width: 48px;
+  height: 48px;
+  place-items: center;
+  border: 1px solid rgba(247, 250, 252, 0.35);
+  border-radius: 50%;
+  transition:
+    background 0.3s ease,
+    border-color 0.3s ease;
+}
+
+.contact__start:hover .contact__start-icon {
+  background: #16587b;
+  border-color: #16587b;
+}
+
+.contact__footer {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  gap: 40px;
+  align-items: end;
+  padding: 80px 0 35px;
+  border-top: 1px solid rgba(247, 250, 252, 0.12);
+}
+
+.contact__footer-brand {
+  display: flex;
+  flex-direction: column;
+}
+
+.contact__footer-brand span {
+  font-family: var(--font-display);
+  font-size: 48px;
+  line-height: 0.9;
+}
+
+.contact__footer-brand small {
+  margin-top: 8px;
+  color: rgba(247, 250, 252, 0.45);
+  font-size: 9px;
+  letter-spacing: 0.2em;
+}
+
+.contact__footer-location {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+  color: rgba(247, 250, 252, 0.5);
+  font-size: 10px;
+  letter-spacing: 0.15em;
+}
+
+.contact__footer-links {
+  display: flex;
+  justify-content: flex-end;
+  gap: 25px;
+}
+
+.contact__footer-links a {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  color: rgba(247, 250, 252, 0.65);
+  font-size: 10px;
+  letter-spacing: 0.08em;
+  transition: color 0.25s ease;
+}
+
+.contact__footer-links a:hover {
+  color: #f7fafc;
+}
+
+.contact__bottom {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding-top: 22px;
+  border-top: 1px solid rgba(247, 250, 252, 0.08);
+  color: rgba(247, 250, 252, 0.3);
+  font-size: 9px;
+  letter-spacing: 0.15em;
+}
+
+.contact__bottom svg {
+  color: #84b3ce;
+}
+
+@media (max-width: 900px) {
+  .contact__container {
+    width: min(100% - 40px, 700px);
+  }
+
+  .contact__top {
+    margin-bottom: 70px;
+  }
+
+  .contact__hero {
+    grid-template-columns: 1fr;
+    gap: 60px;
+    min-height: auto;
+  }
+
+  .contact__hero-side {
+    max-width: 500px;
+  }
+
+  .contact__footer {
+    grid-template-columns: 1fr 1fr;
+  }
+
+  .contact__footer-links {
+    grid-column: 1 / -1;
+    justify-content: flex-start;
+  }
+}
+
+@media (max-width: 600px) {
+  .contact__container {
+    width: calc(100% - 32px);
+    padding-top: 28px;
+  }
+
+  .contact__top {
+    margin-bottom: 65px;
+  }
+
+  .contact__section-number {
+    gap: 10px;
+  }
+
+  .contact__section-number span:first-child {
+    display: none;
+  }
+
+  .contact__hero {
+    margin-bottom: 80px;
+  }
+
+  .contact__hero h2 {
+    font-size: clamp(70px, 20vw, 110px);
+  }
+
+  .contact__hero h3 {
+    font-size: clamp(55px, 16vw, 90px);
+  }
+
+  .contact__footer {
+    grid-template-columns: 1fr;
+    padding-top: 55px;
+  }
+
+  .contact__footer-links {
+    flex-wrap: wrap;
+  }
+
+  .contact__bottom {
+    gap: 15px;
+  }
+
+  .contact__bottom span:first-child {
+    max-width: 130px;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .contact__wave {
+    animation: none;
+  }
+}

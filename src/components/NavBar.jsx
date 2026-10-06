@@ -1,6 +1,6 @@
 import { useEffect, useState } from 'react';
 import { ArrowUpRight, Menu, X } from 'lucide-react';
-import './Navbar.css';
+import './NavBar.css';
 
 
 function WhatsAppIcon({ size = 17 }) {

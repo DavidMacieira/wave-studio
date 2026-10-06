@@ -56,7 +56,7 @@ function ContactStepSuccess({ data, onReset }) {
   }, []);
 
   const handleWhatsApp = () => {
-    const phoneNumber = '351000000000';
+    const phoneNumber = '351936018970';
 
     const url = `https://wa.me/${phoneNumber}?text=${encodeURIComponent(
       message

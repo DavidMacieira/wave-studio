@@ -1,29 +1,8 @@
 import { motion } from 'framer-motion';
+import { Link } from 'react-router-dom';
 import { ArrowUpRight } from 'lucide-react';
 import './Clients.css';
-
-const clientTypes = [
-  {
-    number: '01',
-    name: 'BARBERSHOP',
-    category: 'Website',
-  },
-  {
-    number: '02',
-    name: 'GYM',
-    category: 'Digital presence',
-  },
-  {
-    number: '03',
-    name: 'RESTAURANT',
-    category: 'Digital experience',
-  },
-  {
-    number: '04',
-    name: 'LOCAL BUSINESS',
-    category: 'Social media',
-  },
-];
+import { projects } from '../data/projects';
 
 function Clients() {
   return (
@@ -56,7 +35,7 @@ function Clients() {
             transition={{ duration: 0.6 }}
           >
             <span>Clients</span>
-            <span>04 / 06</span>
+            <span>{String(projects.length).padStart(2, '0')} / 06</span>
           </motion.div>
         </div>
 
@@ -96,7 +75,7 @@ function Clients() {
 
         {/* CLIENTS */}
         <div className="clients__list">
-          {clientTypes.map((client, index) => (
+          {projects.map((client, index) => (
             <motion.div
               className="clients__item"
               key={client.number}
@@ -108,26 +87,14 @@ function Clients() {
                 delay: index * 0.08,
               }}
             >
-              <span className="clients__item-number">
-                {client.number}
-              </span>
-
-              <div className="clients__item-main">
-                <span className="clients__item-name">
-                  {client.name}
-                </span>
-
-                <span className="clients__item-category">
-                  {client.category}
-                </span>
-              </div>
-
-              <div className="clients__item-arrow">
-                <ArrowUpRight
-                  size={22}
-                  strokeWidth={1.5}
-                />
-              </div>
+              <Link to={`/projects/${client.slug}`} className="clients__item-link" aria-label={`View ${client.name} project`}>
+                <span className="clients__item-number">{client.number}</span>
+                <div className="clients__item-main">
+                  <span className="clients__item-name">{client.name}</span>
+                  <span className="clients__item-category">{client.category}</span>
+                </div>
+                <div className="clients__item-arrow"><ArrowUpRight size={22} strokeWidth={1.5} /></div>
+              </Link>
             </motion.div>
           ))}
         </div>

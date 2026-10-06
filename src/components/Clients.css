@@ -555,3 +555,22 @@
     transition: none;
   }
 }
+
+/* Link wrapper keeps the entire project row interactive. */
+.clients__item {
+  display: block;
+}
+
+.clients__item-link {
+  display: grid;
+  grid-template-columns: 55px 1fr 45px;
+  align-items: center;
+  gap: 20px;
+}
+
+@media (max-width: 650px) {
+  .clients__item-link {
+    grid-template-columns: 32px 1fr 38px;
+    gap: 12px;
+  }
+}
